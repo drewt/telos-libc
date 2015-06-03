@@ -476,7 +476,10 @@ case "${host}" in
 	##newlib_cflags="${newlib_cflags} -I`newlib-flags --kernel-dir`/include"
 	##newlib_cflags="${newlib_cflags} -idirafter ${gcc_dir}include"
 	;;
-
+  i[34567]86-*-telos*)
+	sys_dir=telos
+	newlib_cflags="${newlib_cflags} -DSIGNAL_PROVIDED"
+	;;
   m68hc11-*-*|m6811-*-*|m6812-*-*|m68hc12-*-*)
 	;;
 
